@@ -100,7 +100,7 @@ class OVOSHomescreen(MycroftSkill):
         self.log.debug('Activating Time/Date resting page')
         self.gui['time_string'] = self.dt_skill.get_display_current_time()
         self.gui['date_string'] = self.dt_skill.get_display_date()
-        self.gui['weekday_string'] = self.dt_skill.get_weekday()
+        self.gui['abbr_weekday_string'] = self.dt_skill.get_abbr_weekday()
         self.gui['month_string'] = self.dt_skill.get_month_date()
         self.gui['year_string'] = self.dt_skill.get_year()
         self.gui['wallpaper_path'] = self.check_wallpaper_path(self.selected_wallpaper)
@@ -118,14 +118,14 @@ class OVOSHomescreen(MycroftSkill):
     def handle_idle_update_time(self):
         self.gui["time_string"] = self.dt_skill.get_display_current_time()
         self.gui["date_string"] = self.dt_skill.get_display_date()
-        self.gui["weekday_string"] = self.dt_skill.get_weekday()
+        self.gui["abbr_weekday_string"] = self.dt_skill.get_abbr_weekday()
         self.gui["month_string"] = self.dt_skill.get_month_date()
         self.gui["year_string"] = self.dt_skill.get_year()
 
     def update_dt(self):
         self.gui["time_string"] = self.dt_skill.get_display_current_time()
         self.gui["date_string"] = self.dt_skill.get_display_date()
-        self.gui["weekday_string"] = self.dt_skill.get_weekday()
+        self.gui["abbr_weekday_string"] = self.dt_skill.get_abbr_weekday()
         self.gui["month_string"] = self.dt_skill.get_month_date()
         self.gui["year_string"] = self.dt_skill.get_year()
 
